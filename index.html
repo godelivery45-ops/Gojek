@@ -31,21 +31,21 @@
         /* Background Hijau Goser dengan Jarak Aman untuk Jam HP */
         .top-bar {
             background-color: #20AFA7;
-            height: 160px;
+            height: 160px; /* Ditambah tingginya */
             width: 100%;
             position: absolute;
             top: 0;
             z-index: 1;
             border-bottom-left-radius: 35px;
             border-bottom-right-radius: 35px;
-            padding-top: 30px;
+            padding-top: 30px; /* JARAK AMAN UNTUK JAM & BATERAI HP */
         }
 
         /* Search Section */
         .search-container {
             position: relative;
             z-index: 10;
-            padding: 40px 20px 10px;
+            padding: 40px 20px 10px; /* Padding atas disesuaikan */
         }
 
         .search-box {
@@ -172,23 +172,18 @@
             justify-content: center;
             margin-bottom: 8px;
             transition: 0.2s;
-            overflow: hidden; /* Tambahan: agar ikon tidak keluar kotak */
         }
 
         .icon-sq:active { transform: scale(0.9); }
         .service-item span { font-size: 12px; font-weight: bold; color: #555; }
 
         /* Colors */
-        .bg-1 { background: #E6F7F6; }
-        .bg-2 { background: #FEECEB; }
-        .bg-3 { background: #EBF5FF; }
-        .bg-4 { background: #FFF4EB; }
+        .bg-1 { background: #E6F7F6; } /* Hijau */
+        .bg-2 { background: #FEECEB; } /* Merah */
+        .bg-3 { background: #EBF5FF; } /* Biru */
+        .bg-4 { background: #FFF4EB; } /* Orange */
 
-        .service-item img { 
-            width: 100%; /* Disesuaikan agar ikon baru pas */
-            height: 100%; 
-            object-fit: cover; 
-        }
+        .service-item img { width: 34px; height: 34px; }
     </style>
 </head>
 <body>
@@ -222,10 +217,9 @@
 
     <div class="services-grid">
         <div class="service-item">
-            <div class="icon-sq bg-1"><img src="goser-ride.png"></div>
+            <div class="icon-sq bg-1"><img src="https://img.icons8.com/color/96/car.png"></div>
             <span>GoRide</span>
         </div>
-        
         <div class="service-item">
             <div class="icon-sq bg-2"><img src="https://img.icons8.com/color/96/car.png"></div>
             <span>GoCar</span>
@@ -271,3 +265,4 @@
     </script>
 </body>
 </html>
+    
