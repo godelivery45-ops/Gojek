@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Goser</title>
+    <title>Goser Sergai</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -28,24 +28,24 @@
             overflow-x: hidden;
         }
 
-        /* Background Hijau Goser dengan Jarak Aman untuk Jam HP */
+        /* Header Background Hijau */
         .top-bar {
             background-color: #20AFA7;
-            height: 160px; /* Ditambah tingginya */
+            height: 160px;
             width: 100%;
             position: absolute;
             top: 0;
             z-index: 1;
             border-bottom-left-radius: 35px;
             border-bottom-right-radius: 35px;
-            padding-top: 30px; /* JARAK AMAN UNTUK JAM & BATERAI HP */
+            padding-top: 40px; /* Jarak aman status bar HP */
         }
 
         /* Search Section */
         .search-container {
             position: relative;
             z-index: 10;
-            padding: 40px 20px 10px; /* Padding atas disesuaikan */
+            padding: 45px 20px 10px;
         }
 
         .search-box {
@@ -57,24 +57,14 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        .search-box i {
-            color: #20AFA7;
-            font-size: 20px;
-            margin-right: 12px;
-        }
+        .search-box i { color: #20AFA7; font-size: 20px; margin-right: 12px; }
+        .search-box input { border: none; outline: none; width: 100%; font-size: 14px; }
 
-        .search-box input {
-            border: none;
-            outline: none;
-            width: 100%;
-            font-size: 14px;
-        }
-
-        /* Slider Banner */
+        /* Slider Banner Utama (Atas) */
         .banner-wrap {
             position: relative;
             z-index: 5;
-            margin-top: 5px;
+            margin-top: 10px;
         }
 
         .owl-carousel .item img {
@@ -101,50 +91,13 @@
             border: 1px solid #f0f0f0;
         }
 
-        .wallet-info {
-            width: 50%;
-            border-right: 1px solid #f0f0f0;
-            padding-left: 5px;
-        }
+        .wallet-info { width: 50%; border-right: 1px solid #f0f0f0; padding-left: 5px; }
+        .wallet-info .label { font-size: 10px; color: #888; font-weight: bold; }
+        .wallet-info .balance { font-size: 18px; font-weight: bold; color: #20AFA7; margin-top: 2px; }
 
-        .wallet-info .label {
-            font-size: 10px;
-            color: #888;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .wallet-info .balance {
-            font-size: 18px;
-            font-weight: bold;
-            color: #20AFA7;
-            margin-top: 2px;
-        }
-
-        .wallet-btns {
-            width: 50%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .btn-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 11px;
-            font-weight: bold;
-            color: #444;
-        }
-
-        .btn-item i {
-            background: #E6F7F6;
-            color: #20AFA7;
-            padding: 8px;
-            border-radius: 12px;
-            font-size: 20px;
-            margin-bottom: 4px;
-        }
+        .wallet-btns { width: 50%; display: flex; justify-content: space-around; align-items: center; }
+        .btn-item { display: flex; flex-direction: column; align-items: center; font-size: 11px; font-weight: bold; color: #444; }
+        .btn-item i { background: #E6F7F6; color: #20AFA7; padding: 8px; border-radius: 12px; font-size: 20px; margin-bottom: 4px; }
 
         /* Services Grid */
         .services-grid {
@@ -153,37 +106,38 @@
             gap: 15px;
             padding: 20px;
             background: white;
-            margin-top: 5px;
         }
 
-        .service-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .icon-sq {
-            width: 56px;
-            height: 56px;
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 8px;
-            transition: 0.2s;
-        }
-
+        .service-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .icon-sq { width: 56px; height: 56px; border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; transition: 0.2s; }
         .icon-sq:active { transform: scale(0.9); }
         .service-item span { font-size: 12px; font-weight: bold; color: #555; }
 
-        /* Colors */
-        .bg-1 { background: #E6F7F6; } /* Hijau */
-        .bg-2 { background: #FEECEB; } /* Merah */
-        .bg-3 { background: #EBF5FF; } /* Biru */
-        .bg-4 { background: #FFF4EB; } /* Orange */
-
+        .bg-1 { background: #E6F7F6; }
+        .bg-2 { background: #FEECEB; }
+        .bg-3 { background: #EBF5FF; }
+        .bg-4 { background: #FFF4EB; }
         .service-item img { width: 34px; height: 34px; }
+
+        /* SEKSI PROMO BAWAH (LOWER SLIDER) */
+        .promo-section {
+            padding: 10px 20px 30px;
+            background: white;
+            margin-top: 10px;
+        }
+
+        .promo-section h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .low-carousel .item img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -198,15 +152,15 @@
     </div>
 
     <div class="banner-wrap">
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img src="baner-slide1.png" alt="B1"></div>
-            <div class="item"><img src="baner-slide2.png" alt="B2"></div>
+        <div class="owl-carousel main-slider owl-theme">
+            <div class="item"><img src="baner-slide1.png" alt="Banner 1"></div>
+            <div class="item"><img src="baner-slide2.png" alt="Banner 2"></div>
         </div>
     </div>
 
     <div class="goser-wallet">
         <div class="wallet-info">
-            <div class="label">Saldo GoserPay</div>
+            <div class="label">SALDO GOSERPAY</div>
             <div class="balance">Rp 0</div>
         </div>
         <div class="wallet-btns">
@@ -250,16 +204,38 @@
         </div>
     </div>
 
+    <div class="promo-section">
+        <h3>Gabung Mitra Goser Sergai</h3>
+        <div class="owl-carousel low-carousel owl-theme">
+            <div class="item">
+                <a href="#">
+                    <img src="promo-mitra-driver.png" alt="Promo Mitra">
+                </a>
+            </div>
+            </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
+            // Slider Atas
+            $(".main-slider").owlCarousel({
                 items: 1,
                 loop: true,
                 autoplay: true,
                 autoplayTimeout: 4000,
                 dots: true
+            });
+
+            // Slider Bawah (Promo)
+            $(".low-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                dots: false,
+                margin: 10
             });
         });
     </script>
