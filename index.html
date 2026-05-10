@@ -28,23 +28,24 @@
             overflow-x: hidden;
         }
 
-        /* Header Background */
+        /* Background Hijau Goser dengan Jarak Aman untuk Jam HP */
         .top-bar {
             background-color: #20AFA7;
-            height: 160px;
+            height: 160px; /* Ditambah tingginya */
             width: 100%;
             position: absolute;
             top: 0;
             z-index: 1;
             border-bottom-left-radius: 35px;
             border-bottom-right-radius: 35px;
+            padding-top: 30px; /* JARAK AMAN UNTUK JAM & BATERAI HP */
         }
 
-        /* Search Container */
+        /* Search Section */
         .search-container {
             position: relative;
             z-index: 10;
-            padding: 45px 20px 10px; /* Jarak aman untuk jam HP */
+            padding: 40px 20px 10px; /* Padding atas disesuaikan */
         }
 
         .search-box {
@@ -73,7 +74,7 @@
         .banner-wrap {
             position: relative;
             z-index: 5;
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
         .owl-carousel .item img {
@@ -86,7 +87,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        /* Wallet Section */
+        /* GoserPay Wallet */
         .goser-wallet {
             background: white;
             width: 90%;
@@ -110,6 +111,7 @@
             font-size: 10px;
             color: #888;
             font-weight: bold;
+            text-transform: uppercase;
         }
 
         .wallet-info .balance {
@@ -169,15 +171,19 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 8px;
+            transition: 0.2s;
         }
 
-        .bg-1 { background: #E6F7F6; }
-        .bg-2 { background: #FEECEB; }
-        .bg-3 { background: #EBF5FF; }
-        .bg-4 { background: #FFF4EB; }
+        .icon-sq:active { transform: scale(0.9); }
+        .service-item span { font-size: 12px; font-weight: bold; color: #555; }
+
+        /* Colors */
+        .bg-1 { background: #E6F7F6; } /* Hijau */
+        .bg-2 { background: #FEECEB; } /* Merah */
+        .bg-3 { background: #EBF5FF; } /* Biru */
+        .bg-4 { background: #FFF4EB; } /* Orange */
 
         .service-item img { width: 34px; height: 34px; }
-        .service-item span { font-size: 12px; font-weight: bold; color: #555; }
     </style>
 </head>
 <body>
@@ -193,12 +199,8 @@
 
     <div class="banner-wrap">
         <div class="owl-carousel owl-theme">
-            <div class="item">
-                <img src="baner-slide1.png" alt="Banner Goser 1">
-            </div>
-            <div class="item">
-                <img src="https://ibb.co.com/MyQ7sPds" alt="Banner Goser 2">
-            </div>
+            <div class="item"><img src="baner-slide1.png" alt="B1"></div>
+            <div class="item"><img src="baner-slide1.png" alt="B2"></div>
         </div>
     </div>
 
