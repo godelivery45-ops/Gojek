@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Goser</title>
+    <title>Goser - Serdang Bedagai</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -29,7 +29,7 @@
             padding-bottom: 30px;
         }
 
-        a { text-decoration: none; color: inherit; }
+        a { text-decoration: none; color: inherit; display: block; }
 
         .top-bar {
             background-color: #20AFA7;
@@ -87,6 +87,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
+        /* GOSERPAY CARD */
         .goser-wallet {
             background: linear-gradient(to right, #ffffff, #eafffd); 
             width: 90%;
@@ -135,7 +136,7 @@
             font-size: 10px;
             font-weight: bold;
             color: #444;
-            cursor: pointer;
+            text-align: center;
         }
 
         .btn-item i {
@@ -143,7 +144,6 @@
             border-radius: 12px;
             font-size: 18px;
             margin-bottom: 4px;
-            transition: 0.2s;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
@@ -152,8 +152,7 @@
         .btn-item:nth-child(3) i { background: #FEECEB; color: #FF4B3E; } 
         .btn-item:nth-child(4) i { background: #FFF4EB; color: #FF9800; } 
 
-        .btn-item:active i { transform: scale(0.9); }
-
+        /* SERVICES GRID */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -168,11 +167,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            cursor: pointer;
-            transition: 0.2s;
         }
-
-        .service-item:active { transform: scale(0.9); }
 
         .icon-sq {
             width: 56px;
@@ -183,9 +178,11 @@
             justify-content: center;
             margin-bottom: 8px;
             overflow: hidden;
+            transition: transform 0.1s;
         }
 
-        .service-item span { font-size: 12px; font-weight: bold; color: #555; }
+        .icon-sq:active { transform: scale(0.9); }
+        .service-item span { font-size: 11px; font-weight: bold; color: #555; }
 
         .bg-1 { background: #E6F7F6; }
         .bg-2 { background: #FEECEB; }
@@ -229,16 +226,16 @@
 
     <div class="banner-wrap">
         <div class="main-slider owl-carousel owl-theme">
-            <div class="item"><img src="baner-slide1.png" alt="B1"></div>
-            <div class="item"><img src="baner-slide2.png" alt="B2"></div>
+            <div class="item"><img src="baner-slide1.png" alt="Promo 1"></div>
+            <div class="item"><img src="baner-slide2.png" alt="Promo 2"></div>
         </div>
     </div>
 
-    <!-- BAGIAN WALLET DENGAN LINK JAGEL -->
+    <!-- FITUR WALLET TERHUBUNG KE JAGEL -->
     <div class="goser-wallet">
         <div class="wallet-info">
             <div class="label">GoserPay</div>
-            <div class="balance" id="display-saldo">Rp 0</div>
+            <div class="balance" id="val-saldo">Rp 0</div>
         </div>
         <div class="wallet-btns">
             <a href="jagel://fitur/saldo" class="btn-item">
@@ -260,7 +257,7 @@
         </div>
     </div>
 
-    <!-- BAGIAN LAYANAN DENGAN LINK JAGEL -->
+    <!-- FITUR LAYANAN TERHUBUNG KE MENU JAGEL -->
     <div class="services-grid">
         <a href="jagel://screen/Goser Ride" class="service-item">
             <div class="icon-sq bg-1"><img src="ride.png"></div>
@@ -270,7 +267,7 @@
             <div class="icon-sq bg-2"><img src="car.png"></div>
             <span>Goser Car</span>
         </a>
-        <a href="jagel://screen/GoFood" class="service-item">
+        <a href="jagel://screen/Goser Food" class="service-item">
             <div class="icon-sq bg-3"><img src="food.png"></div>
             <span>Goser Food</span>
         </a>
@@ -290,22 +287,19 @@
             <div class="icon-sq bg-3"><img src="Tagihan.png"></div>
             <span>Tagihan</span>
         </a>
-        <a href="jagel://screen/Lainnya" class="service-item">
+        <div class="service-item">
             <div class="icon-sq bg-4">
                 <i class='bx bx-grid-alt' style="font-size: 28px; color: #999;"></i>
             </div>
             <span>Lainnya</span>
-        </a>
+        </div>
     </div>
 
     <div class="promo-section">
         <h3>Info Promo Mitra</h3>
         <div class="promo-slider owl-carousel owl-theme">
             <div class="item">
-                <img src="promo-mitra-driver.png" alt="Promo Mitra 1">
-            </div>
-            <div class="item">
-                <img src="promo-mitra-driver.png" alt="Promo Mitra 2">
+                <img src="promo-mitra-driver.png" alt="Promo">
             </div>
         </div>
     </div>
@@ -318,22 +312,20 @@
                 items: 1,
                 loop: true,
                 autoplay: true,
-                autoplayTimeout: 4000,
                 dots: true
             });
 
             $(".promo-slider").owlCarousel({
                 items: 1.15, 
                 margin: 15,
-                loop: false,
                 dots: false
             });
 
-            // SCRIPT AMBIL SALDO DARI PARAMETER URL JAGEL
+            // FUNGSI SINKRON SALDO DARI JAGEL
             const urlParams = new URLSearchParams(window.location.search);
-            const saldoUser = urlParams.get('saldoku');
-            if (saldoUser) {
-                document.getElementById('display-saldo').innerText = 'Rp ' + saldoUser;
+            const mySaldo = urlParams.get('saldoku');
+            if (mySaldo) {
+                document.getElementById('val-saldo').innerText = 'Rp ' + mySaldo;
             }
         });
     </script>
