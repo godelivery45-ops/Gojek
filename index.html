@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Goser</title>
+    <title>Goser - Home</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -26,26 +26,25 @@
         body {
             background-color: #fcfcfc;
             overflow-x: hidden;
+            padding-bottom: 30px;
         }
 
-        /* Background Hijau Goser dengan Jarak Aman untuk Jam HP */
+        /* Top Background Hijau */
         .top-bar {
             background-color: #20AFA7;
-            height: 160px; /* Ditambah tingginya */
+            height: 160px;
             width: 100%;
             position: absolute;
             top: 0;
             z-index: 1;
             border-bottom-left-radius: 35px;
             border-bottom-right-radius: 35px;
-            padding-top: 30px; /* JARAK AMAN UNTUK JAM & BATERAI HP */
         }
 
-        /* Search Section */
         .search-container {
             position: relative;
             z-index: 10;
-            padding: 40px 20px 10px; /* Padding atas disesuaikan */
+            padding: 40px 20px 10px;
         }
 
         .search-box {
@@ -57,27 +56,17 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        .search-box i {
-            color: #20AFA7;
-            font-size: 20px;
-            margin-right: 12px;
-        }
+        .search-box i { color: #20AFA7; font-size: 20px; margin-right: 12px; }
+        .search-box input { border: none; outline: none; width: 100%; font-size: 14px; }
 
-        .search-box input {
-            border: none;
-            outline: none;
-            width: 100%;
-            font-size: 14px;
-        }
-
-        /* Slider Banner */
+        /* Slider Banner Utama */
         .banner-wrap {
             position: relative;
             z-index: 5;
             margin-top: 5px;
         }
 
-        .owl-carousel .item img {
+        .main-slider .item img {
             width: 90%;
             margin: 0 auto;
             height: 185px;
@@ -87,7 +76,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        /* GoserPay Wallet */
+        /* Dompet GoserPay */
         .goser-wallet {
             background: white;
             width: 90%;
@@ -101,68 +90,24 @@
             border: 1px solid #f0f0f0;
         }
 
-        .wallet-info {
-            width: 50%;
-            border-right: 1px solid #f0f0f0;
-            padding-left: 5px;
-        }
+        .wallet-info { width: 50%; border-right: 1px solid #f0f0f0; padding-left: 5px; }
+        .wallet-info .label { font-size: 10px; color: #888; font-weight: bold; text-transform: uppercase; }
+        .wallet-info .balance { font-size: 18px; font-weight: bold; color: #20AFA7; margin-top: 2px; }
 
-        .wallet-info .label {
-            font-size: 10px;
-            color: #888;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
+        .wallet-btns { width: 50%; display: flex; justify-content: space-around; align-items: center; }
+        .btn-item { display: flex; flex-direction: column; align-items: center; font-size: 11px; font-weight: bold; color: #444; }
+        .btn-item i { background: #E6F7F6; color: #20AFA7; padding: 8px; border-radius: 12px; font-size: 20px; margin-bottom: 4px; }
 
-        .wallet-info .balance {
-            font-size: 18px;
-            font-weight: bold;
-            color: #20AFA7;
-            margin-top: 2px;
-        }
-
-        .wallet-btns {
-            width: 50%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .btn-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 11px;
-            font-weight: bold;
-            color: #444;
-        }
-
-        .btn-item i {
-            background: #E6F7F6;
-            color: #20AFA7;
-            padding: 8px;
-            border-radius: 12px;
-            font-size: 20px;
-            margin-bottom: 4px;
-        }
-
-        /* Services Grid */
+        /* Grid Layanan Utama */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             padding: 20px;
             background: white;
-            margin-top: 5px;
         }
 
-        .service-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
+        .service-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
         .icon-sq {
             width: 56px;
             height: 56px;
@@ -171,19 +116,39 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 8px;
+            overflow: hidden;
             transition: 0.2s;
         }
-
         .icon-sq:active { transform: scale(0.9); }
         .service-item span { font-size: 12px; font-weight: bold; color: #555; }
+        .service-item img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* Colors */
-        .bg-1 { background: #E6F7F6; } /* Hijau */
-        .bg-2 { background: #FEECEB; } /* Merah */
-        .bg-3 { background: #EBF5FF; } /* Biru */
-        .bg-4 { background: #FFF4EB; } /* Orange */
+        /* Section Promo Mitra */
+        .promo-section {
+            margin-top: 20px;
+            padding: 0 20px;
+        }
 
-        .service-item img { width: 34px; height: 34px; }
+        .promo-section h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .promo-slider .item img {
+            width: 100%;
+            height: 150px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Warna Latar Ikon */
+        .bg-1 { background: #E6F7F6; }
+        .bg-2 { background: #FEECEB; }
+        .bg-3 { background: #EBF5FF; }
+        .bg-4 { background: #FFF4EB; }
     </style>
 </head>
 <body>
@@ -198,9 +163,9 @@
     </div>
 
     <div class="banner-wrap">
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img src="baner-slide1.png" alt="B1"></div>
-            <div class="item"><img src="baner-slide2.png" alt="B2"></div>
+        <div class="main-slider owl-carousel owl-theme">
+            <div class="item"><img src="banner1.png" alt="Banner Utama 1"></div>
+            <div class="item"><img src="banner2.png" alt="Banner Utama 2"></div>
         </div>
     </div>
 
@@ -241,13 +206,24 @@
             <span>GoBox</span>
         </div>
         <div class="service-item">
-            <div class="icon-sq bg-3"><img src="Tagihan.png"></div>
+            <div class="icon-sq bg-3"><img src="tagihan.png"></div>
             <span>Tagihan</span>
         </div>
         <div class="service-item">
-            <div class="icon-sq bg-4"><img src="bill.png"></div>
-                <i class='bx bx-grid-alt' style="font-size: 28px; color: #999;"></i></div>
+            <div class="icon-sq bg-4"><i class='bx bx-grid-alt' style="font-size: 28px; color: #999;"></i></div>
             <span>Lainnya</span>
+        </div>
+    </div>
+
+    <div class="promo-section">
+        <h3>Info Mitra Goser</h3>
+        <div class="promo-slider owl-carousel owl-theme">
+            <div class="item">
+                <img src="promo-mitra-food.png" alt="Promo Mitra Food">
+            </div>
+            <div class="item">
+                <img src="promo-mitra-driver.png" alt="Promo Mitra Driver">
+            </div>
         </div>
     </div>
 
@@ -255,15 +231,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
+            // Inisialisasi Slider Atas
+            $(".main-slider").owlCarousel({
                 items: 1,
                 loop: true,
                 autoplay: true,
                 autoplayTimeout: 4000,
                 dots: true
             });
+
+            // Inisialisasi Slider Promo Bawah
+            $(".promo-slider").owlCarousel({
+                items: 1.15, // Menampilkan sedikit bagian banner sebelah agar user tahu bisa di-swipe
+                margin: 15,
+                loop: false,
+                dots: false
+            });
         });
     </script>
 </body>
 </html>
-    
