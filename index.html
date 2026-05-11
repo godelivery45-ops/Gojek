@@ -29,7 +29,6 @@
             padding-bottom: 30px;
         }
 
-        /* Background Hijau Goser */
         .top-bar {
             background-color: #20AFA7;
             height: 160px;
@@ -42,7 +41,6 @@
             padding-top: 30px;
         }
 
-        /* Search Section */
         .search-container {
             position: relative;
             z-index: 10;
@@ -71,7 +69,6 @@
             font-size: 14px;
         }
 
-        /* Slider Banner Utama */
         .banner-wrap {
             position: relative;
             z-index: 5;
@@ -88,42 +85,44 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        /* GoserPay Wallet */
+        /* --- PENYESUAIAN WARNA BAR GOSERPAY --- */
         .goser-wallet {
-            background: white;
+            /* Menggunakan gradasi warna brand Goser agar lebih hidup */
+            background: linear-gradient(to right, #ffffff, #eafffd); 
             width: 90%;
             margin: 15px auto;
             border-radius: 20px;
             display: flex;
-            padding: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 15px 10px;
+            box-shadow: 0 8px 20px rgba(32, 175, 167, 0.12);
             position: relative;
             z-index: 10;
-            border: 1px solid #f0f0f0;
+            border: 1.5px solid #dff7f5;
+            align-items: center;
         }
 
         .wallet-info {
-            width: 50%;
-            border-right: 1px solid #f0f0f0;
+            width: 32%;
+            border-right: 1px solid #e0f2f1;
             padding-left: 5px;
         }
 
         .wallet-info .label {
-            font-size: 10px;
-            color: #888;
+            font-size: 9px;
+            color: #666;
             font-weight: bold;
             text-transform: uppercase;
         }
 
         .wallet-info .balance {
-            font-size: 18px;
+            font-size: 15px;
             font-weight: bold;
             color: #20AFA7;
             margin-top: 2px;
         }
 
         .wallet-btns {
-            width: 50%;
+            width: 68%;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -133,21 +132,28 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
             color: #444;
         }
 
         .btn-item i {
-            background: #E6F7F6;
-            color: #20AFA7;
             padding: 8px;
             border-radius: 12px;
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 4px;
+            transition: 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* Services Grid */
+        /* Warna Ikon Tetap Sesuai Permintaan Sebelumnya */
+        .btn-item:nth-child(1) i { background: #EBF5FF; color: #007AFF; } 
+        .btn-item:nth-child(2) i { background: #E6F7F6; color: #20AFA7; } 
+        .btn-item:nth-child(3) i { background: #FEECEB; color: #FF4B3E; } 
+        .btn-item:nth-child(4) i { background: #FFF4EB; color: #FF9800; } 
+
+        .btn-item:active i { transform: scale(0.9); }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -172,7 +178,6 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 8px;
-            transition: 0.2s;
             overflow: hidden;
         }
 
@@ -184,13 +189,8 @@
         .bg-3 { background: #EBF5FF; }
         .bg-4 { background: #FFF4EB; }
 
-        .service-item img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-        }
+        .service-item img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* PENYESUAIAN UKURAN BANNER SLIDE BAWAH */
         .promo-section {
             margin-top: 25px;
             padding: 0 20px;
@@ -201,12 +201,11 @@
             margin-bottom: 12px;
             color: #333;
             font-weight: bold;
-            padding-left: 5px;
         }
 
         .promo-slider .item img {
             width: 100%;
-            height: 160px; /* Ukuran disesuaikan agar tidak terlalu gepeng/kecil */
+            height: 160px; 
             border-radius: 18px;
             object-fit: cover;
             box-shadow: 0 3px 10px rgba(0,0,0,0.06);
@@ -234,12 +233,26 @@
 
     <div class="goser-wallet">
         <div class="wallet-info">
-            <div class="label">Saldo GoserPay</div>
+            <div class="label">GoserPay</div>
             <div class="balance">Rp 0</div>
         </div>
         <div class="wallet-btns">
-            <div class="btn-item"><i class='bx bx-plus-circle'></i><span>Top Up</span></div>
-            <div class="btn-item"><i class='bx bx-paper-plane'></i><span>Bayar</span></div>
+            <div class="btn-item">
+                <i class='bx bx-plus-circle'></i>
+                <span>Top Up</span>
+            </div>
+            <div class="btn-item">
+                <i class='bx bx-paper-plane'></i>
+                <span>Bayar</span>
+            </div>
+            <div class="btn-item">
+                <i class='bx bx-wallet-alt'></i>
+                <span>Tarik</span>
+            </div>
+            <div class="btn-item">
+                <i class='bx bx-qr-scan'></i>
+                <span>Scan</span>
+            </div>
         </div>
     </div>
 
@@ -254,7 +267,7 @@
         </div>
         <div class="service-item">
             <div class="icon-sq bg-3"><img src="food.png"></div>
-            <span>Goser Food</span>
+            <span>GoFood</span>
         </div>
         <div class="service-item">
             <div class="icon-sq bg-4"><img src="send.png"></div>
@@ -296,7 +309,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function(){
-            // Slider Banner Atas
             $(".main-slider").owlCarousel({
                 items: 1,
                 loop: true,
@@ -305,13 +317,11 @@
                 dots: true
             });
 
-            // Slider Banner Bawah
             $(".promo-slider").owlCarousel({
-                items: 1.15, // Menampilkan sedikit slide berikutnya sebagai cue swipe
+                items: 1.15, 
                 margin: 15,
                 loop: false,
-                dots: false,
-                autoplay: false
+                dots: false
             });
         });
     </script>
